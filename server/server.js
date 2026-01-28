@@ -45,3 +45,7 @@ app.post("/create-order", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
