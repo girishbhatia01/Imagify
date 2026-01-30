@@ -131,7 +131,7 @@ const transactionhandler = async (req, res) => {
         return res.status(200).json({ message: "Transaction recorded successfully", credits: existingUser.credits });
     }   
     catch (error) {
-        console.error("Error recording transaction:", error);
+        console.error("Error recording transaction:", error.message);
         return res.status(500).json({ message: "Internal server error" });
     }
 };
